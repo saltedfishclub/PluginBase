@@ -54,7 +54,7 @@ public class Main extends Plugin {
         // 基本树形结构和过滤器
         registerCommand(
                 LiteralArgumentBuilder.<Source>literal("command_name")
-                        .executes(s -> { //Command<S>，可以写单独的类处理命令也可以Lambda
+                        .executes(s -> { //Command<Source>，可以写单独的类处理命令也可以Lambda
                             Source source = s.getSource();
                             source.getSender(); //发送者
                             source.getMessageEvent(); //信息事件，可直接回复，用instanceof判定事件来源
